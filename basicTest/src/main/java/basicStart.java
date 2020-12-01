@@ -8,7 +8,9 @@ public class basicStart {
     public static void main(String[] args) {
         System.out.println("测试");
         //斐波那契数列
-        fibonacci();
+        //fibonacci();
+        //递归算法
+        getFibonacci();
 
 
     }
@@ -35,11 +37,21 @@ public class basicStart {
                  b = c;
              }
          }
+    }
+    //递归算法
+    static void getFibonacci(){
+        for(int i = 0; i<10;i++){
+            System.out.println(getNumber(i));
+        }
+    }
 
+    static int getNumber(int num){
 
-
-
-
+        if(num == 0 || num == 1){
+            return 1;
+        }else {
+            return getNumber(num -1)+getNumber(num - 2);
+        }
 
 
     }
